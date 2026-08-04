@@ -8,6 +8,7 @@ public class helloController {
       return "Hello Security";
    }
 
+    @PreAuthorize("hasRole('ADMIN')")
    @GetMapping("/admin/hello")
    public String sayAdminHello() {
       return "Hello, admin";
