@@ -1,6 +1,7 @@
 package com.spring.security;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Bean;
 
 @Configuration
 @EnableWebSecurity
