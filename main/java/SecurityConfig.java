@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @EnableMethodSecurity
 public class SecurityConfig {
 
+  @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http){
+
   }
 }
