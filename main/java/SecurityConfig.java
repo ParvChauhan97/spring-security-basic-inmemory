@@ -22,4 +22,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
         http.httpBasic(Customizer.withDefaults());
         return http.build();
   }
+
+  public UserDetailsService userDetailsService() {
+  }
 }
