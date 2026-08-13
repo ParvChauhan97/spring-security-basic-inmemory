@@ -25,5 +25,10 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
 
   @Bean
   public UserDetailsService userDetailsService() {
+    
+    UserDetails user1 = User.withUsername("User1")
+                .password("{noop}password123")
+                .roles("USER")
+                .build();
   }
 }
