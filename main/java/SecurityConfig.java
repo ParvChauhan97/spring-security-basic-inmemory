@@ -13,7 +13,13 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 public class SecurityConfig {
 
   @Bean
-  public SecurityFilterChain securityFilterChain(HttpSecurity http){
+public SecurityFilterChain securityFilterChain(HttpSecurity http) {
+  http.authorizeHttpRequests(authorizeRequests ->
+                authorizeRequests.requestMatchers("/admin/**").hasRole("ADMIN")
+                                .requestMatchers("/user/**").hasRole("USER").
+                anyRequest().authenticated());
 
+        http.httpBasic(Customizer.withDefaults());
+        return http.build();
   }
 }
