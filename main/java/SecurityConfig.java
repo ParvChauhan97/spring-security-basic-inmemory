@@ -40,5 +40,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
                 .password("{noop}adminPassword")
                 .roles("ADMIN")
                 .build();
+
+    return new InMemoryUserDetailsManager(user1, user2, admin);
   }
 }
