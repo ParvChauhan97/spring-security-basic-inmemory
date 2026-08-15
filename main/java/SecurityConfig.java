@@ -30,10 +30,10 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
                 .password("{noop}password123")
                 .roles("USER")
                 .build();
-  }
 
-  UserDetails user2 = User.withUsername("User2")
+    UserDetails user2 = User.withUsername("User2")
                 .password("{noop}password2")
                 .roles("USER")
                 .build();
+  }
 }
