@@ -35,5 +35,10 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
                 .password("{noop}password2")
                 .roles("USER")
                 .build();
+
+    UserDetails admin = User.withUsername("Admin")
+                .password("{noop}adminPassword")
+                .roles("ADMIN")
+                .build();
   }
 }
