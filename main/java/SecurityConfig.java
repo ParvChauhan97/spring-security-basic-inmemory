@@ -6,13 +6,13 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-
+  
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
 
-  @Bean
+@Bean
 public SecurityFilterChain securityFilterChain(HttpSecurity http) {
   http.authorizeHttpRequests(authorizeRequests ->
                 authorizeRequests.requestMatchers("/admin/**").hasRole("ADMIN")
