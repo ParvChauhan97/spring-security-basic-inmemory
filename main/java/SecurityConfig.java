@@ -19,7 +19,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
                                 .requestMatchers("/user/**").hasRole("USER").
                 anyRequest().authenticated());
 
-        http.httpBasic(Customizer.withDefaults());
+        http.httpBasic(Customizer.withDefaults()); 
         return http.build();
   }
 
