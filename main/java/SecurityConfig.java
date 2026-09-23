@@ -23,7 +23,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
         return http.build();
   }
 
-  @Bean
+  @Bean  
   public UserDetailsService userDetailsService() {
     
     UserDetails user1 = User.withUsername("User1")
