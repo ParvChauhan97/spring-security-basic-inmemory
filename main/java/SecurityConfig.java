@@ -20,7 +20,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) {
                 anyRequest().authenticated());
 
         http.httpBasic(Customizer.withDefaults()); 
-        return http.build();
+        return http.build();  
   }
 
   @Bean  
